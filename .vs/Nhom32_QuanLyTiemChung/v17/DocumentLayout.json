@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|c:\\users\\admin\\downloads\\nhom321223\\nhom32\\nhom32_quanlytiemchung\\nhom32_quanlytiemchung\\views\\chart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|solutionrelative:nhom32_quanlytiemchung\\views\\chart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|c:\\users\\admin\\downloads\\nhom321223\\nhom32\\nhom32_quanlytiemchung\\nhom32_quanlytiemchung\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|solutionrelative:nhom32_quanlytiemchung\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|c:\\users\\admin\\downloads\\nhom321223\\nhom32\\nhom32_quanlytiemchung\\nhom32_quanlytiemchung\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|solutionrelative:nhom32_quanlytiemchung\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|c:\\users\\admin\\downloads\\nhom321223\\nhom32\\nhom32_quanlytiemchung\\nhom32_quanlytiemchung\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|solutionrelative:nhom32_quanlytiemchung\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|c:\\users\\admin\\downloads\\nhom321223\\nhom32\\nhom32_quanlytiemchung\\nhom32_quanlytiemchung\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|solutionrelative:nhom32_quanlytiemchung\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|c:\\users\\admin\\downloads\\nhom321223\\nhom32\\nhom32_quanlytiemchung\\nhom32_quanlytiemchung\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|solutionrelative:nhom32_quanlytiemchung\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|c:\\users\\admin\\downloads\\nhom321223\\nhom32\\nhom32_quanlytiemchung\\nhom32_quanlytiemchung\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D00D2D7-2328-4D4A-8AD1-E4BD85BF68C2}|Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung.csproj|solutionrelative:nhom32_quanlytiemchung\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "Nhom32_QuanLyTiemChung\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "Nhom32_QuanLyTiemChung\\App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T08:43:09.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Nhom32_QuanLyTiemChung\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Nhom32_QuanLyTiemChung\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAgwC4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T08:37:58.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Views\\Chart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Nhom32_QuanLyTiemChung\\Views\\Chart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Views\\Chart\\Index.cshtml",
+              "RelativeToolTip": "Nhom32_QuanLyTiemChung\\Views\\Chart\\Index.cshtml",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAHEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T08:31:56.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Nhom32_QuanLyTiemChung\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Nhom32_QuanLyTiemChung\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAqwJIAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T08:31:02.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Nhom32_QuanLyTiemChung\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Nhom32_QuanLyTiemChung\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T08:30:02.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Nhom32_QuanLyTiemChung\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Nhom32_QuanLyTiemChung\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T08:28:30.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Web.config",
+              "RelativeDocumentMoniker": "Nhom32_QuanLyTiemChung\\Web.config",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\Nhom321223\\Nhom32\\Nhom32_QuanLyTiemChung\\Nhom32_QuanLyTiemChung\\Web.config",
+              "RelativeToolTip": "Nhom32_QuanLyTiemChung\\Web.config",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAADsAAAAGAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-06-13T08:26:39.223Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

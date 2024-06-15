@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1dea5dff54674f82a8e5bf929ffd019e" Name="Diagram1">
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.ChiTietPhieuNhap" Width="1.5" PointX="9.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.ChiTietPhieuXuat" Width="1.5" PointX="9.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.ChiTietTiemChung" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.ChucVu" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.DonVi" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.NguoiGiamHo" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.PhieuNhap" Width="1.5" PointX="7.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.PhieuXuat" Width="1.5" PointX="7.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.PhuongXa" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.QuanHuyen" Width="1.5" PointX="1.5" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.QuyenTruyCap" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.sysdiagram" Width="1.5" PointX="9.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.TaiKhoan" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.ThongTinCanBo" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.Tre" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUANLYTIEMCHUNGModel.Vaccine" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ChiTietPh__idPhi__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ChiTietPh__idVac__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ChiTietPh__idPhi__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ChiTietPh__idVac__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ChiTietTi__idCan__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ChiTietTi__idTre__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ChiTietTi__idVac__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ThongTinC__idChu__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ThongTinC__idDon__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__NguoiGiam__idPhu__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__Tre__idNguoiGiam__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__PhieuNhap__idCan__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__PhieuXuat__idCan__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__PhuongXa__idQuan__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__TaiKhoan__idQuye__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="QUANLYTIEMCHUNGModel.FK__ThongTinC__idTai__2E1BDC42" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

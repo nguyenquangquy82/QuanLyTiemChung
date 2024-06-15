@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Nhom32_QuanLyTiemChung.Models.PhieuNhap>
+
+@{
+    ViewBag.Title = "Phiếu nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Phiếu nhập</h2>
+
+<p>
+    @Html.ActionLink("Thêm phiếu nhập", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead>
+    <td>Mã phiếu Nhập</td>
+    <td>Ngày nhập   </td>
+    <td>Tổng số lượng nhập</td>
+    <td>Ghi chú</td>
+    <td>Mã cán bộ</td>
+   
+    <th>Thao tác </th>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.idPhieuNhap)</td>
+                <td>@Html.DisplayFor(modelItem => item.ngayNhap)</td>
+                <td>@Html.DisplayFor(modelItem => item.tongSoLuongNhap)</td>
+                <td>@Html.DisplayFor(modelItem => item.ghiChu)</td>
+                <td>@Html.DisplayFor(modelItem => item.idCanBo)</td>
+                
+
+
+
+
+
+                <th>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.idPhieuNhap }, new { @class = "btn btn-warning btn-sm" }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.idPhieuNhap }, new { @class = "btn btn-info btn-sm" }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.idPhieuNhap }, new { @class = "btn btn-danger btn-sm" })
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa; /* Màu nền xám nhạt */
+        margin: 0;
+        padding: 0;
+    }
+    h2 {
+        margin: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th, .table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .table thead {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+    .btn {
+        margin-right: 5px;
+    }
+</style>
+
+
+

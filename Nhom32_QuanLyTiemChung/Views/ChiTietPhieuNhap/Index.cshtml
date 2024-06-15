@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Nhom32_QuanLyTiemChung.Models.ChiTietPhieuNhap>
+
+@{
+    ViewBag.Title = "Chi tiết phiếu nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Danh sách chi tiết phiếu nhập</h2>
+
+<p>
+    @Html.ActionLink("Thêm chi tiết phiếu nhập", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Mã phiếu nhập</th>
+            <th>Mã Vaccine</th>
+            <th>Ngày sản xuất</th>
+            <th>Ngày hết hạn</th>
+            <th>Số lượng nhập</th>
+            <th>Lô sản xuất</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@Html.DisplayFor(modelItem => item.idPhieuNhap)</th>
+                <th>@Html.DisplayFor(modelItem => item.idVaccine)</th>
+                <th>@Html.DisplayFor(modelItem => item.ngaySanXuat)</th>
+                <th>@Html.DisplayFor(modelItem => item.ngayHetHan)</th>
+                <th>@Html.DisplayFor(modelItem => item.soLuongNhap)</th>
+                <th>@Html.DisplayFor(modelItem => item.loSanXuat)</th>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa; /* Màu nền xám nhạt */
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        margin: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th, .table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .table thead {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+    .btn {
+        margin-right: 5px;
+    }
+</style>
+
+
+
+

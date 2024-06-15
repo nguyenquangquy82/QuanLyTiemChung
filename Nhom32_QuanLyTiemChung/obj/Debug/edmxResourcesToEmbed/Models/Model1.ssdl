@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QUANLYTIEMCHUNGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChiTietPhieuNhap">
+    <Key>
+      <PropertyRef Name="idPhieuNhap" />
+      <PropertyRef Name="idVaccine" />
+    </Key>
+    <Property Name="idPhieuNhap" Type="int" Nullable="false" />
+    <Property Name="idVaccine" Type="int" Nullable="false" />
+    <Property Name="ngaySanXuat" Type="date" Nullable="false" />
+    <Property Name="ngayHetHan" Type="date" Nullable="false" />
+    <Property Name="soLuongNhap" Type="int" Nullable="false" />
+    <Property Name="loSanXuat" Type="int" />
+  </EntityType>
+  <EntityType Name="ChiTietPhieuXuat">
+    <Key>
+      <PropertyRef Name="idPhieuXuat" />
+      <PropertyRef Name="idVaccine" />
+    </Key>
+    <Property Name="idPhieuXuat" Type="int" Nullable="false" />
+    <Property Name="idVaccine" Type="int" Nullable="false" />
+    <Property Name="soLuongXuat" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChiTietTiemChung">
+    <Key>
+      <PropertyRef Name="idMuiTiem" />
+    </Key>
+    <Property Name="idMuiTiem" Type="int" Nullable="false" />
+    <Property Name="idTre" Type="varchar" MaxLength="10" />
+    <Property Name="idVaccine" Type="int" />
+    <Property Name="ngayTiem" Type="date" Nullable="false" />
+    <Property Name="tinhTrang" Type="nvarchar" MaxLength="100" />
+    <Property Name="thuTuMuiTiem" Type="int" />
+    <Property Name="idCanBo" Type="int" />
+  </EntityType>
+  <EntityType Name="ChucVu">
+    <Key>
+      <PropertyRef Name="idChucVu" />
+    </Key>
+    <Property Name="idChucVu" Type="int" Nullable="false" />
+    <Property Name="tenChucVu" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="moTa" Type="ntext" />
+  </EntityType>
+  <EntityType Name="DonVi">
+    <Key>
+      <PropertyRef Name="idDonVi" />
+    </Key>
+    <Property Name="idDonVi" Type="int" Nullable="false" />
+    <Property Name="tenDonVi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="moTa" Type="ntext" />
+  </EntityType>
+  <EntityType Name="NguoiGiamHo">
+    <Key>
+      <PropertyRef Name="idNguoiGiamHo" />
+    </Key>
+    <Property Name="idNguoiGiamHo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="hoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="moiQuanHe" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="soNha" Type="nvarchar" MaxLength="50" />
+    <Property Name="idPhuongXa" Type="int" />
+  </EntityType>
+  <EntityType Name="PhieuNhap">
+    <Key>
+      <PropertyRef Name="idPhieuNhap" />
+    </Key>
+    <Property Name="idPhieuNhap" Type="int" Nullable="false" />
+    <Property Name="ngayNhap" Type="date" Nullable="false" />
+    <Property Name="tongSoLuongNhap" Type="int" />
+    <Property Name="ghiChu" Type="ntext" />
+    <Property Name="idCanBo" Type="int" />
+  </EntityType>
+  <EntityType Name="PhieuXuat">
+    <Key>
+      <PropertyRef Name="idPhieuXuat" />
+    </Key>
+    <Property Name="idPhieuXuat" Type="int" Nullable="false" />
+    <Property Name="ngayXuat" Type="date" Nullable="false" />
+    <Property Name="tongSoLuongXuat" Type="int" />
+    <Property Name="ghiChu" Type="ntext" />
+    <Property Name="idCanBo" Type="int" />
+  </EntityType>
+  <EntityType Name="PhuongXa">
+    <Key>
+      <PropertyRef Name="idPhuongXa" />
+    </Key>
+    <Property Name="idPhuongXa" Type="int" Nullable="false" />
+    <Property Name="idQuanHuyen" Type="int" />
+    <Property Name="tenPhuongXa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="moTa" Type="ntext" />
+  </EntityType>
+  <EntityType Name="QuanHuyen">
+    <Key>
+      <PropertyRef Name="idQuanHuyen" />
+    </Key>
+    <Property Name="idQuanHuyen" Type="int" Nullable="false" />
+    <Property Name="tenQuanHuyen" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="moTa" Type="text" />
+  </EntityType>
+  <EntityType Name="QuyenTruyCap">
+    <Key>
+      <PropertyRef Name="idQuyen" />
+    </Key>
+    <Property Name="idQuyen" Type="int" Nullable="false" />
+    <Property Name="mucTruyCap" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="moTa" Type="ntext" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="idTK" />
+    </Key>
+    <Property Name="idTK" Type="int" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="passWord" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="idQuyen" Type="int" />
+  </EntityType>
+  <EntityType Name="ThongTinCanBo">
+    <Key>
+      <PropertyRef Name="idCanBo" />
+    </Key>
+    <Property Name="idCanBo" Type="int" Nullable="false" />
+    <Property Name="hoTen" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SDT" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="eMail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CCCD" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="diaChi" Type="ntext" />
+    <Property Name="gioiTinh" Type="nvarchar" MaxLength="5" />
+    <Property Name="idChucVu" Type="int" />
+    <Property Name="idTaiKhoan" Type="int" />
+    <Property Name="idDonVi" Type="int" />
+  </EntityType>
+  <EntityType Name="Tre">
+    <Key>
+      <PropertyRef Name="idTre" />
+    </Key>
+    <Property Name="idTre" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="idNguoiGiamHo" Type="varchar" MaxLength="10" />
+    <Property Name="hoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ngaySinh" Type="date" Nullable="false" />
+    <Property Name="chieuCao" Type="varchar" MaxLength="3" />
+    <Property Name="canNang" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Vaccine">
+    <Key>
+      <PropertyRef Name="idVaccine" />
+    </Key>
+    <Property Name="idVaccine" Type="int" Nullable="false" />
+    <Property Name="tenVaccine" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="nuocSanXuat" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="nhaSanXuat" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="moTaBenh" Type="ntext" />
+    <Property Name="kyTiem" Type="int" />
+    <Property Name="soLuongMuiTiem" Type="int" />
+    <Property Name="soLuongConLai" Type="int" />
+  </EntityType>
+  <Association Name="FK__ChiTietPh__idPhi__3A81B327">
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuNhap">
+        <PropertyRef Name="idPhieuNhap" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuNhap">
+        <PropertyRef Name="idPhieuNhap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietPh__idPhi__440B1D61">
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuXuat">
+        <PropertyRef Name="idPhieuXuat" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuXuat">
+        <PropertyRef Name="idPhieuXuat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietPh__idVac__3B75D760">
+    <End Role="Vaccine" Type="Self.Vaccine" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vaccine">
+        <PropertyRef Name="idVaccine" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuNhap">
+        <PropertyRef Name="idVaccine" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietPh__idVac__44FF419A">
+    <End Role="Vaccine" Type="Self.Vaccine" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietPhieuXuat" Type="Self.ChiTietPhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vaccine">
+        <PropertyRef Name="idVaccine" />
+      </Principal>
+      <Dependent Role="ChiTietPhieuXuat">
+        <PropertyRef Name="idVaccine" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietTi__idCan__5629CD9C">
+    <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietTiemChung" Type="Self.ChiTietTiemChung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThongTinCanBo">
+        <PropertyRef Name="idCanBo" />
+      </Principal>
+      <Dependent Role="ChiTietTiemChung">
+        <PropertyRef Name="idCanBo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietTi__idTre__534D60F1">
+    <End Role="Tre" Type="Self.Tre" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietTiemChung" Type="Self.ChiTietTiemChung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tre">
+        <PropertyRef Name="idTre" />
+      </Principal>
+      <Dependent Role="ChiTietTiemChung">
+        <PropertyRef Name="idTre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietTi__idVac__5441852A">
+    <End Role="Vaccine" Type="Self.Vaccine" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChiTietTiemChung" Type="Self.ChiTietTiemChung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vaccine">
+        <PropertyRef Name="idVaccine" />
+      </Principal>
+      <Dependent Role="ChiTietTiemChung">
+        <PropertyRef Name="idVaccine" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NguoiGiam__idPhu__4D94879B">
+    <End Role="PhuongXa" Type="Self.PhuongXa" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NguoiGiamHo" Type="Self.NguoiGiamHo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhuongXa">
+        <PropertyRef Name="idPhuongXa" />
+      </Principal>
+      <Dependent Role="NguoiGiamHo">
+        <PropertyRef Name="idPhuongXa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuNhap__idCan__37A5467C">
+    <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThongTinCanBo">
+        <PropertyRef Name="idCanBo" />
+      </Principal>
+      <Dependent Role="PhieuNhap">
+        <PropertyRef Name="idCanBo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuXuat__idCan__412EB0B6">
+    <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThongTinCanBo">
+        <PropertyRef Name="idCanBo" />
+      </Principal>
+      <Dependent Role="PhieuXuat">
+        <PropertyRef Name="idCanBo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhuongXa__idQuan__4AB81AF0">
+    <End Role="QuanHuyen" Type="Self.QuanHuyen" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PhuongXa" Type="Self.PhuongXa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuanHuyen">
+        <PropertyRef Name="idQuanHuyen" />
+      </Principal>
+      <Dependent Role="PhuongXa">
+        <PropertyRef Name="idQuanHuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaiKhoan__idQuye__267ABA7A">
+    <End Role="QuyenTruyCap" Type="Self.QuyenTruyCap" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuyenTruyCap">
+        <PropertyRef Name="idQuyen" />
+      </Principal>
+      <Dependent Role="TaiKhoan">
+        <PropertyRef Name="idQuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThongTinC__idChu__2D27B809">
+    <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucVu">
+        <PropertyRef Name="idChucVu" />
+      </Principal>
+      <Dependent Role="ThongTinCanBo">
+        <PropertyRef Name="idChucVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThongTinC__idDon__2F10007B">
+    <End Role="DonVi" Type="Self.DonVi" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonVi">
+        <PropertyRef Name="idDonVi" />
+      </Principal>
+      <Dependent Role="ThongTinCanBo">
+        <PropertyRef Name="idDonVi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThongTinC__idTai__2E1BDC42">
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ThongTinCanBo" Type="Self.ThongTinCanBo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="idTK" />
+      </Principal>
+      <Dependent Role="ThongTinCanBo">
+        <PropertyRef Name="idTaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tre__idNguoiGiam__5070F446">
+    <End Role="NguoiGiamHo" Type="Self.NguoiGiamHo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Tre" Type="Self.Tre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiGiamHo">
+        <PropertyRef Name="idNguoiGiamHo" />
+      </Principal>
+      <Dependent Role="Tre">
+        <PropertyRef Name="idNguoiGiamHo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QUANLYTIEMCHUNGModelStoreContainer">
+    <EntitySet Name="ChiTietPhieuNhap" EntityType="Self.ChiTietPhieuNhap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietPhieuXuat" EntityType="Self.ChiTietPhieuXuat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietTiemChung" EntityType="Self.ChiTietTiemChung" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChucVu" EntityType="Self.ChucVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DonVi" EntityType="Self.DonVi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NguoiGiamHo" EntityType="Self.NguoiGiamHo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhieuNhap" EntityType="Self.PhieuNhap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhieuXuat" EntityType="Self.PhieuXuat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhuongXa" EntityType="Self.PhuongXa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuanHuyen" EntityType="Self.QuanHuyen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuyenTruyCap" EntityType="Self.QuyenTruyCap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThongTinCanBo" EntityType="Self.ThongTinCanBo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tre" EntityType="Self.Tre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vaccine" EntityType="Self.Vaccine" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ChiTietPh__idPhi__3A81B327" Association="Self.FK__ChiTietPh__idPhi__3A81B327">
+      <End Role="PhieuNhap" EntitySet="PhieuNhap" />
+      <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietPh__idPhi__440B1D61" Association="Self.FK__ChiTietPh__idPhi__440B1D61">
+      <End Role="PhieuXuat" EntitySet="PhieuXuat" />
+      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietPh__idVac__3B75D760" Association="Self.FK__ChiTietPh__idVac__3B75D760">
+      <End Role="Vaccine" EntitySet="Vaccine" />
+      <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietPh__idVac__44FF419A" Association="Self.FK__ChiTietPh__idVac__44FF419A">
+      <End Role="Vaccine" EntitySet="Vaccine" />
+      <End Role="ChiTietPhieuXuat" EntitySet="ChiTietPhieuXuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietTi__idCan__5629CD9C" Association="Self.FK__ChiTietTi__idCan__5629CD9C">
+      <End Role="ThongTinCanBo" EntitySet="ThongTinCanBo" />
+      <End Role="ChiTietTiemChung" EntitySet="ChiTietTiemChung" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietTi__idTre__534D60F1" Association="Self.FK__ChiTietTi__idTre__534D60F1">
+      <End Role="Tre" EntitySet="Tre" />
+      <End Role="ChiTietTiemChung" EntitySet="ChiTietTiemChung" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietTi__idVac__5441852A" Association="Self.FK__ChiTietTi__idVac__5441852A">
+      <End Role="Vaccine" EntitySet="Vaccine" />
+      <End Role="ChiTietTiemChung" EntitySet="ChiTietTiemChung" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NguoiGiam__idPhu__4D94879B" Association="Self.FK__NguoiGiam__idPhu__4D94879B">
+      <End Role="PhuongXa" EntitySet="PhuongXa" />
+      <End Role="NguoiGiamHo" EntitySet="NguoiGiamHo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuNhap__idCan__37A5467C" Association="Self.FK__PhieuNhap__idCan__37A5467C">
+      <End Role="ThongTinCanBo" EntitySet="ThongTinCanBo" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuXuat__idCan__412EB0B6" Association="Self.FK__PhieuXuat__idCan__412EB0B6">
+      <End Role="ThongTinCanBo" EntitySet="ThongTinCanBo" />
+      <End Role="PhieuXuat" EntitySet="PhieuXuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhuongXa__idQuan__4AB81AF0" Association="Self.FK__PhuongXa__idQuan__4AB81AF0">
+      <End Role="QuanHuyen" EntitySet="QuanHuyen" />
+      <End Role="PhuongXa" EntitySet="PhuongXa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaiKhoan__idQuye__267ABA7A" Association="Self.FK__TaiKhoan__idQuye__267ABA7A">
+      <End Role="QuyenTruyCap" EntitySet="QuyenTruyCap" />
+      <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThongTinC__idChu__2D27B809" Association="Self.FK__ThongTinC__idChu__2D27B809">
+      <End Role="ChucVu" EntitySet="ChucVu" />
+      <End Role="ThongTinCanBo" EntitySet="ThongTinCanBo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThongTinC__idDon__2F10007B" Association="Self.FK__ThongTinC__idDon__2F10007B">
+      <End Role="DonVi" EntitySet="DonVi" />
+      <End Role="ThongTinCanBo" EntitySet="ThongTinCanBo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThongTinC__idTai__2E1BDC42" Association="Self.FK__ThongTinC__idTai__2E1BDC42">
+      <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+      <End Role="ThongTinCanBo" EntitySet="ThongTinCanBo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tre__idNguoiGiam__5070F446" Association="Self.FK__Tre__idNguoiGiam__5070F446">
+      <End Role="NguoiGiamHo" EntitySet="NguoiGiamHo" />
+      <End Role="Tre" EntitySet="Tre" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

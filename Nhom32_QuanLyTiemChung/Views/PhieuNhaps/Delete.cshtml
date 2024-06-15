@@ -1,0 +1,123 @@
+﻿@model Nhom32_QuanLyTiemChung.Models.PhieuNhap
+
+@{
+    ViewBag.Title = "Xóa cán bộ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="details-container">
+
+    <h2><strong>Bạn có chắc chắn muốn xóa cán bộ này không?</strong></h2>
+    <dl class="dl-horizontal">
+        <dt>
+            Mã phiếu nhập:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idPhieuNhap)
+        </dd>
+        <dt>
+            Ngày nhập:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngayNhap)
+        </dd>
+
+        <dt>
+            Tổng số lượng nhập:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tongSoLuongNhap)
+        </dd>
+
+        <dt>
+            Ghi chú:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghiChu)
+        </dd>
+
+        <dt>
+            Mã cán bộ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCanBo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions">
+    <input type="submit" value="Xóa" class="btn btn-danger" />
+    @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-secondary" })
+</div>
+    }
+</div>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+    .form-actions{
+        text-align:center;
+    }
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: red;
+        text-align: center;
+    }
+
+    .details-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    dl.dl-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    dt {
+        width: 30%;
+        font-weight: bold;
+        color: #555;
+        margin: 0 0 10px 0;
+    }
+
+    dd {
+        width: 70%;
+        margin: 0 0 10px 0;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        color: white;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+

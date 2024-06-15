@@ -1,0 +1,162 @@
+﻿@model Nhom32_QuanLyTiemChung.Models.ThongTinCanBo
+
+@{
+    ViewBag.Title = "Xóa cán bộ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="details-container">
+
+    <h3><strong>Bạn có chắc chắn muốn xóa cán bộ này không?</strong></h3>
+    <dl class="dl-horizontal">
+        <dt>
+            Mã cán bộ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCanBo)
+        </dd>
+        <dt>
+            Họ và tên:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hoTen)
+        </dd>
+
+        <dt>
+            Số điện thoại:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            Gmail:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eMail)
+        </dd>
+
+        <dt>
+            Căn cước công dân:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CCCD)
+        </dd>
+
+        <dt>
+            Địa chỉ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diaChi)
+        </dd>
+
+        <dt>
+            Giới tính:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gioiTinh)
+        </dd>
+
+        <dt>
+            Mã chức vụ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idChucVu)
+        </dd>
+
+        <dt>
+            Mã đơn vị:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idDonVi)
+        </dd>
+
+        <dt>
+            Mã tài khoản:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idTaiKhoan)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions">
+    <input type="submit" value="Xóa" class="btn btn-danger" />
+    @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-secondary" })
+</div>
+    }
+</div>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 22px;
+        color: #dc3545; /* Red color to indicate warning */
+        margin-bottom: 20px;
+    }
+
+    .details-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    dl.dl-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    dt {
+        width: 30%;
+        font-weight: bold;
+        color: #555;
+        margin: 0 0 10px 0;
+    }
+
+    dd {
+        width: 70%;
+        margin: 0 0 10px 0;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        color: white;
+        margin-left: 10px;
+    }
+</style>

@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Nhom32_QuanLyTiemChung.Models.ChiTietTiemChung>
+
+@{
+    ViewBag.Title = "Chi tiết tiêm chủng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bảng danh sách chi tiết tiêm chủng</h2>
+
+<p>
+    @Html.ActionLink("Thêm mũi tiêm", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Mã mũi tiêm</th>
+            <th>Mã trẻ</th>
+            <th>Mã vaccine</th>
+            <th>Ngày tiêm</th>
+            <th>Tình trạng</th>
+            <th>Thứ tự mũi tiêm</th>
+            <th>Mã cán bộ</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.idMuiTiem)</td>
+                <td>@Html.DisplayFor(modelItem => item.idTre)</td>
+                <td>@Html.DisplayFor(modelItem => item.idVaccine)</td>
+                <td>@Html.DisplayFor(modelItem => item.ngayTiem)</td>
+                <td>@Html.DisplayFor(modelItem => item.tinhTrang)</td>
+                <td>@Html.DisplayFor(modelItem => item.thuTuMuiTiem)</td>
+                <td>@Html.DisplayFor(modelItem => item.idCanBo)</td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.idMuiTiem }, new { @class = "btn btn-warning btn-sm" }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.idMuiTiem }, new { @class = "btn btn-info btn-sm" }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.idMuiTiem }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    h2 {
+        margin: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th, .table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .table thead {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+    .btn {
+        margin-right: 5px;
+    }
+</style>
+
+
+
+

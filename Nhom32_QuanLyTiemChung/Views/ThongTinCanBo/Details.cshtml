@@ -1,0 +1,154 @@
+﻿@model Nhom32_QuanLyTiemChung.Models.ThongTinCanBo
+
+@{
+    ViewBag.Title = "Chi tiết cán bộ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="details-container">
+    
+    <h2><strong>Chi tiết cán bộ</strong></h2>
+    <dl class="dl-horizontal">
+        <dl class="dl-horizontal">
+            <dt>
+                Mã cán bộ:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.idCanBo)
+            </dd>
+            <dt>
+                Họ và tên:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.hoTen)
+            </dd>
+
+            <dt>
+                Số điện thoại:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SDT)
+            </dd>
+
+            <dt>
+                Gmail:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.eMail)
+            </dd>
+
+            <dt>
+                Căn cước công dân:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CCCD)
+            </dd>
+
+            <dt>
+                Địa chỉ:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.diaChi)
+            </dd>
+
+            <dt>
+                Giới tính:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.gioiTinh)
+            </dd>
+
+            <dt>
+                Mã chức vụ:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.idChucVu)
+            </dd>
+
+            <dt>
+                Mã đơn vị:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.idDonVi)
+            </dd>
+
+            <dt>
+                Mã tài khoản:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.idTaiKhoan)
+            </dd>
+
+        </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.idCanBo }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Trở về", "Index", null, new { @class = "btn btn-secondary ml-2" })
+</p>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+    }
+
+    .details-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    dl.dl-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    dt {
+        width: 30%;
+        font-weight: bold;
+        color: #555;
+        margin: 0 0 10px 0;
+    }
+
+    dd {
+        width: 70%;
+        margin: 0 0 10px 0;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        color: white;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>

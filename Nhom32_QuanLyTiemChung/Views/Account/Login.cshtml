@@ -1,0 +1,157 @@
+﻿@model Nhom32_QuanLyTiemChung.Models.Account
+
+@{
+    ViewBag.Title = "Đăng nhập";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Đăng nhập</title>
+    <style>
+        body {
+            background-repeat: no-repeat; /* Ngăn không cho ảnh nền lặp lại */
+            background-size: cover; /* Đảm bảo ảnh nền phủ kín toàn bộ màn hình */
+            background-position: center; /* Đặt vị trí ảnh nền ở giữa */
+            background-image: url(Content/img/home.png);
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .wrapper {
+            max-width: 600px; /* Đặt chiều rộng tối đa */
+            min-width: 400px; /* Đặt chiều rộng tối thiểu */
+            width: 80%; /* Đặt chiều rộng theo phần trăm */
+            padding: 30px; /* Thêm padding để tạo không gian bên trong */
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            box-sizing: border-box; /* Đảm bảo padding được tính vào kích thước tổng */
+        }
+
+        .form-signin {
+            text-align: center;
+        }
+
+        .form-signin-heading {
+            margin-bottom:40px;
+            font-size:30px;
+            color: green;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .checkbox {
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: 14px;
+            display: block;
+            padding-left: 20px; /* Để checkbox không bị che mất */
+            position: relative;
+            cursor: pointer;
+        }
+
+            .checkbox input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .checkbox:hover .checkmark {
+            background-color: #ccc;
+        }
+
+        .checkbox input:checked + .checkmark {
+            background-color: #007bff; /* Màu xanh khi được tích */
+            border-color: #007bff;
+        }
+
+        .checkbox .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .checkbox input:checked + .checkmark:after {
+            display: block;
+        }
+
+        .checkbox .checkmark:after {
+            left: 5px;
+            top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+            .btn-login:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        @using (Html.BeginForm("Verify", "Account", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+
+            <h2 class="form-signin-heading">Vui lòng đăng nhập</h2>
+
+
+            @Html.TextBoxFor(m => m.userName, new { @class = "form-control", placeholder = "Tài khoản", required = "required", autofocus = "autofocus" })
+            @Html.PasswordFor(m => m.passWord, new { @class = "form-control", placeholder = "Mật khẩu", required = "required" })
+
+            <label class="checkbox">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <span class="checkmark"></span>
+                Nhớ tài khoản
+            </label>
+
+            <button class="btn-login" type="submit">Đăng nhập</button>
+        }
+    </div>
+</body>
+</html>

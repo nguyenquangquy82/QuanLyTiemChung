@@ -1,0 +1,111 @@
+﻿@model Nhom32_QuanLyTiemChung.Models.Vaccine
+
+@{
+    ViewBag.Title = "Chi tiết vaccine";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2><strong>Chi tiết vaccine</strong></h2>
+
+<div class="container mt-4">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            Mã vaccine:
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.idVaccine)
+        </dd>
+
+        <dt class="col-sm-3">
+            Tên vaccine:
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.tenVaccine)
+        </dd>
+
+        <dt class="col-sm-3">
+            Nước sản xuất:
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.nuocSanXuat)
+        </dd>
+
+        <dt class="col-sm-3">
+            Nhà sản xuất:
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.nhaSanXuat)
+        </dd>
+
+        <dt class="col-sm-3">
+            Mô tả bệnh:
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.moTaBenh)
+        </dd>
+
+        <dt class="col-sm-3">
+            Kỳ tiêm:
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.kyTiem)
+        </dd>
+
+        <dt class="col-sm-3">
+            Số lượng mũi tiêm:
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.soLuongMuiTiem)
+        </dd>
+        <dt class="col-sm-3">
+            Số lượng còn lại:
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.soLuongConLai)
+        </dd>
+    </dl>
+</div>
+
+<p class="mt-4">
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.idVaccine }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Trở về", "Index", null, new { @class = "btn btn-secondary ml-2" })
+</p>
+
+<style>
+    body {
+        font-family: sans-serif;
+        background: #f9f9f9;
+    }
+    h2 {
+       
+        color:red;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-width: 800px;
+    }
+
+    .dl-horizontal dt {
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .ml-2 {
+        margin-left: .5rem;
+    }
+
+    .mt-4 {
+        margin-top: 1.5rem;
+    }
+</style>

@@ -1,0 +1,90 @@
+﻿@model Nhom32_QuanLyTiemChung.Models.Tre
+
+@{
+    ViewBag.Title = "Chi tiết trẻ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="details-container">
+    <h2><strong>Chi tiết trẻ</strong></h2>
+    <dl class="dl-horizontal">
+        <dt>Mã trẻ:</dt>
+        <dd>@Html.DisplayFor(model => model.idTre)</dd>
+
+        <dt>Mã người giám hộ:</dt>
+        <dd>@Html.DisplayFor(model => model.idNguoiGiamHo)</dd>
+
+        <dt>Họ và tên:</dt>
+        <dd>@Html.DisplayFor(model => model.hoTen)</dd>
+
+        <dt>Ngày sinh:</dt>
+        <dd>@Html.DisplayFor(model => model.ngaySinh)</dd>
+
+        <dt>Chiều cao:</dt>
+        <dd>@Html.DisplayFor(model => model.chieuCao)</dd>
+
+        <dt>Cân nặng:</dt>
+        <dd>@Html.DisplayFor(model => model.canNang)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.idTre }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-secondary" })
+</p>
+
+<style>
+    body {
+        font-family: sans-serif;
+    }
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+    }
+
+    .details-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    dl.dl-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    dt {
+        width: 30%;
+        font-weight: bold;
+        color: #555;
+        margin: 0 0 10px 0;
+    }
+
+    dd {
+        width: 70%;
+        margin: 0 0 10px 0;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        color: white;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>

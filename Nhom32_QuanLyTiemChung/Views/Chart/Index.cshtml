@@ -1,0 +1,157 @@
+﻿@model List<Nhom32_QuanLyTiemChung.Models.VaccineViewModel>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    .chart-container {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Thêm cái này để sắp xếp các phần tử theo chiều dọc */
+        font-family: "Roboto", sans-serif;
+        background: #007bff40;
+    }
+
+    h2 {
+        color: #FF6969; /* Màu sắc cho tiêu đề */
+        text-align: center; /* Căn giữa theo chiều ngang */
+        margin-bottom: 20px; /* Thêm khoảng cách dưới tiêu đề */
+        font-size: 24px; /* Kích thước font chữ */
+        font-weight: bold; /* Đậm chữ */
+        text-transform: uppercase; /* Chuyển thành chữ in hoa */
+    }
+
+
+    .chart {
+        width: 800px; /* Tăng chiều rộng của biểu đồ */
+        height: 400px; /* Tăng chiều cao của biểu đồ */
+        display: flex; /* Sử dụng flexbox để căn giữa */
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        align-items: flex-start; /* Căn phần nội dung lên trên */
+    }
+
+    .numbers {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        width: 70px; /* Tăng chiều rộng của phần hiển thị số liệu */
+        height: 100%;
+        display: inline-block;
+        float: left;
+    }
+
+        .numbers li {
+            list-style: none;
+            height: 200px; /* Tăng chiều cao của các mục trong phần hiển thị số liệu */
+            position: relative;
+            bottom: 195px;
+        }
+
+        .numbers span {
+            color: black;
+            font-size: 16px; /* Tăng kích thước chữ */
+            font-weight: 600;
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+        }
+
+    .bars {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        background: rgba(23, 192, 235, 0.5);
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        width: 700px; /* Tăng chiều rộng của phần hiển thị thanh biểu đồ */
+        height: 400px; /* Tăng chiều cao của phần hiển thị thanh biểu đồ */
+        box-shadow: 0 0 10px 0 #555;
+        border-radius: 5px;
+    }
+
+        .bars li {
+            display: table-cell;
+            width: 120px; /* Tăng chiều rộng của các thanh */
+            height: 400px; /* Tăng chiều cao của các thanh */
+            position: relative;
+        }
+
+        .bars span {
+            color: black;
+            width: 100%;
+            position: absolute;
+            bottom: -30px;
+            text-align: center;
+        }
+
+        .bars .bar {
+            display: block;
+            background: yellow;
+            width: 70px; /* Tăng chiều rộng của các thanh */
+            position: absolute;
+            bottom: 0;
+            margin-left: 25px;
+            text-align: center;
+            box-shadow: 0 0 10px 0 rgba(23, 192, 235, 0.5);
+            transition: 0.5s;
+            transition-property: background, box-shadow;
+        }
+
+            .bars .bar:hover {
+                background: #ff000fe3;
+                box-shadow: 0 0 10px 0 rgba(85, 239, 196, 0.5);
+                cursor: pointer;
+            }
+
+            .bars .bar:before {
+                color: #fff;
+                content: attr(data-percentage) ' trẻ';
+                position: relative;
+                bottom: 20px;
+            }
+</style>
+
+
+@{
+    ViewBag.Title = "Thống kê";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="chart-container">
+    <h2>SỐ LƯỢNG TRẺ ĐÃ TIÊM THEO VACCINE</h2>
+    <div class="chart">
+        <ul class="numbers">
+            <li><span style=" text-align: center; width: 100px; ">Số lượng trẻ</span></li>
+            <li><span>50</span></li>
+            <li><span>0</span></li>
+        </ul>
+        <ul class="bars">
+            @foreach (var vaccine in Model)
+            {
+                <li>
+                    <div class="bar" data-percentage="@vaccine.SoLuongTreTiem"></div>
+                    <span>@vaccine.TenVaccine</span>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.bars li .bar').each(function (key, bar) {
+            var percentage = $(this).data('percentage');
+            $(this).animate({
+                'height': percentage + '%'
+            }, 1000);
+        });
+    });
+</script>
